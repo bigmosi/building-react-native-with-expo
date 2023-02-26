@@ -7,7 +7,7 @@ const ImageScreen = ({navigation}) => {
         <Text>Image Screen</Text>
           <Button
             title="Go Home"
-            onPress={() => {navigation.navigate("Home")}}/>
+            onPress={() => {navigation.navigate("App_to_Home")}}/>
       </View>
     )
 };
