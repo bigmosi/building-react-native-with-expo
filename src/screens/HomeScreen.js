@@ -1,16 +1,55 @@
 import React from 'react';
-import { Button, View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
-    return (
-      <View style={styles.mainView}>
-        <Text>Home Screen</Text>
-          <Button
-            title="Go to Details"
-            onPress={() => {navigation.navigate("Home_to_Details", {screenNumber: 1})}}
-            />
-      </View>
-    )
+
+  return (
+    <View style={styles.mainView}>
+      <Text>Home Screen</Text>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("Home_to_Details", {
+            movie: {
+              title: "Star Wars",
+              release: 1977,
+              screenNumber: 1
+            }
+          })
+        }}>
+        <View>
+          <Text>Star Wars</Text>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("Home_to_Details", {
+            movie: {
+              title: "Black Panther",
+              release: 2018,
+              screenNumber: 1
+            }
+          })
+        }}>
+          <View>
+          <Text>Black Panther</Text>
+        </View>
+        </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("Home_to_Details", {
+            movie: {
+              title: "The Matrix",
+              release: 1999,
+              screenNumber: 1
+            }
+          })
+        }}>
+           <View>
+             <Text>The Matrix</Text>
+           </View>
+        </TouchableOpacity>
+    </View>
+  )
 };
 
 const styles = StyleSheet.create({

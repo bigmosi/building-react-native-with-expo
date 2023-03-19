@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet } from 'react-native';
 
-const ImageScreen = ({navigation}) => {
+const ImageScreen = () => {
     return (
       <View style={styles.mainView}>
         <Text>Image Screen</Text>
           <Button
             title="Go Home"
-            onPress={() => {navigation.navigate("App_to_Home")}}/>
+            onPress={() => {console.log("Go to Details")}}/>
       </View>
     )
 };
